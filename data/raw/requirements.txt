@@ -1,0 +1,28 @@
+# --- core ---
+fastapi>=0.115.6
+uvicorn[standard]>=0.34.0
+pydantic>=2.10.4
+pydantic-settings>=2.7.0
+python-dotenv>=1.0.1
+
+# --- document parsing ---
+pymupdf>=1.25.1           # PDF text + layout
+python-docx>=1.1.2        # .docx
+beautifulsoup4>=4.12.3    # .html
+lxml>=5.3.0
+
+# --- retrieval ---
+sentence-transformers>=3.3.1   # local embeddings + cross-encoder reranker
+chromadb>=0.5.23               # local vector store, no server needed
+rank-bm25>=0.2.2               # keyword half of hybrid search
+
+# --- llm ---
+httpx>=0.28.1             # talks to Ollama's local HTTP API
+
+# --- ui ---
+streamlit>=1.41.1
+
+# --- eval + dev ---
+pyyaml>=6.0.2
+pytest>=8.3.4
+rich>=13.9.4
