@@ -1,0 +1,65 @@
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from app.ingestion.chunk import chunk_document
+from app.ingestion.parse import ParsedDoc, _clean
+
+SAMPLE = """MASTER SERVICES AGREEMENT
+
+1. Definitions. "Services" means the services described in each Statement of Work.
+
+2. Term. This Agreement begins on the Effective Date and continues for three (3) years.
+
+2.1 Renewal. This Agreement shall automatically renew for successive one-year terms
+unless either party gives ninety (90) days written notice prior to the end of the
+then-current term.
+
+3. Governing Law. This Agreement is governed by the laws of the State of Delaware.
+"""
+
+
+def _doc(text=SAMPLE):
+    return ParsedDoc("sample_msa", "Sample MSA", _clean(text), "data/raw/sample.txt")
+
+
+def test_produces_chunks():
+    chunks = chunk_document(_doc())
+    assert len(chunks) >= 1
+    assert all(c.text.strip() for c in chunks)
+
+
+def test_chunk_ids_are_unique():
+    chunks = chunk_document(_doc())
+    assert len({c.chunk_id for c in chunks}) == len(chunks)
+
+
+def test_respects_size_budget():
+    chunks = chunk_document(_doc(), size=200, overlap=40)
+    # allow modest overshoot: a single indivisible unit may exceed the budget
+    assert all(len(c.text) <= 200 * 1.8 for c in chunks)
+
+
+def test_captures_section_headings():
+    chunks = chunk_document(_doc(), size=150, overlap=20)
+    sections = " ".join(c.section for c in chunks)
+    assert any(ch.isdigit() for ch in sections)
+
+
+def test_renewal_clause_survives_chunking():
+    """The clause we most want to retrieve must stay intact in some chunk."""
+    chunks = chunk_document(_doc(), size=400, overlap=80)
+    joined = [c.text for c in chunks]
+    assert any("ninety (90) days written notice" in t for t in joined)
+
+
+def test_section_label_is_a_heading_not_a_sentence():
+    """A numbered sentence must not become a section label."""
+    chunks = chunk_document(_doc(), size=150, overlap=20)
+    for c in chunks:
+        assert len(c.section.split()) <= 6
+
+
+def test_empty_document_is_safe():
+    assert chunk_document(_doc("   \n\n  ")) == []
