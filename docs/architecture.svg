@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1010" viewBox="0 0 1240 1010" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#A9ABA6"/></marker></defs>
+<rect width="1240" height="1010" fill="#FBFAF8"/>
+<text x="32" y="36" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#1A1D21">Enterprise RAG Document Assistant</text>
+<text x="32" y="54" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#6E7278">Retrieval grounds the answers; the agent acts on them. Everything below runs locally.</text>
+<rect x="24" y="72" width="1192" height="152" rx="10" fill="#F3F1EC"/>
+<text x="44" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.1" fill="#15635C">1 · INGESTION</text>
+<text x="156.8" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#6E7278">offline — re-run when documents change</text>
+<rect x="44" y="126" width="190" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="139.0" y="157.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Source documents</text>
+<text x="139.0" y="174.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">PDF · DOCX · HTML</text>
+<rect x="284" y="126" width="190" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="379.0" y="157.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Parse</text>
+<text x="379.0" y="174.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">text, tables, pages</text>
+<rect x="524" y="126" width="190" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="619.0" y="157.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Chunk</text>
+<text x="619.0" y="174.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">clause-aware + overlap</text>
+<rect x="764" y="126" width="190" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="859.0" y="157.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Embed</text>
+<text x="859.0" y="174.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">bge-small · local</text>
+<rect x="1004" y="126" width="190" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="1099.0" y="157.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Write indexes</text>
+<text x="1099.0" y="174.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">vectors + keywords</text>
+<line x1="240" y1="162.0" x2="276" y2="162.0" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="480" y1="162.0" x2="516" y2="162.0" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="720" y1="162.0" x2="756" y2="162.0" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="960" y1="162.0" x2="996" y2="162.0" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="24" y="244" width="1192" height="138" rx="10" fill="#F3F1EC"/>
+<text x="44" y="270" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.1" fill="#15635C">2 · STORAGE</text>
+<text x="141.6" y="270" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#6E7278">plain files on disk — no database server to run</text>
+<rect x="44" y="296" width="360" height="72" rx="7" fill="#FFFFFF" stroke="#C9C5BC" stroke-width="1.2"/>
+<text x="224.0" y="327.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Chroma</text>
+<text x="224.0" y="344.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">chunk vectors + metadata + access tags</text>
+<rect x="440" y="296" width="360" height="72" rx="7" fill="#FFFFFF" stroke="#C9C5BC" stroke-width="1.2"/>
+<text x="620.0" y="327.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">BM25 index</text>
+<text x="620.0" y="344.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">tokenised keyword index (pickled)</text>
+<rect x="836" y="296" width="360" height="72" rx="7" fill="#FFFFFF" stroke="#C9C5BC" stroke-width="1.2"/>
+<text x="1016.0" y="327.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Postgres</text>
+<text x="1016.0" y="344.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">users, roles, agent runs, audit log — Phase 4+</text>
+<path d="M 1099.0 204 L 1099.0 272 L 224.0 272" fill="none" stroke="#A9ABA6" stroke-width="1.6"/>
+<line x1="224.0" y1="272" x2="224.0" y2="288" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="620.0" y1="272" x2="620.0" y2="288" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="1089.0" y="266" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#6E7278">writes</text>
+<rect x="24" y="402" width="1192" height="212" rx="10" fill="#F3F1EC"/>
+<text x="44" y="428" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.1" fill="#15635C">3 · QUERY</text>
+<text x="126.39999999999999" y="428" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#6E7278">per question — target under 3 seconds</text>
+<rect x="44" y="466" width="150" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="119.0" y="497.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Question</text>
+<text x="119.0" y="514.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">natural language</text>
+<rect x="222" y="466" width="160" height="72" rx="7" fill="#E7F0EE" stroke="#BBD5D0" stroke-width="1.2"/>
+<text x="302.0" y="497.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#0F4F49">Permission filter</text>
+<text x="302.0" y="514.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">before retrieval</text>
+<rect x="608" y="466" width="150" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="683.0" y="497.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">RRF fusion</text>
+<text x="683.0" y="514.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">merge by rank</text>
+<rect x="786" y="466" width="180" height="72" rx="7" fill="#E7F0EE" stroke="#BBD5D0" stroke-width="1.2"/>
+<text x="876.0" y="497.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#0F4F49">Rerank</text>
+<text x="876.0" y="514.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">cross-encoder</text>
+<rect x="994" y="466" width="200" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="1094.0" y="497.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Cited answer</text>
+<text x="1094.0" y="514.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">grounded + sources</text>
+<rect x="410" y="458" width="170" height="38" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="495.0" y="482.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Vector search</text>
+<rect x="410" y="508" width="170" height="38" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="495.0" y="532.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">BM25 keyword</text>
+<line x1="200" y1="502" x2="214" y2="502" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 388 502 L 390 502 L 390 477 L 402 477" fill="none" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 388 502 L 390 502 L 390 527 L 402 527" fill="none" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 586 477 L 600 477 L 600 502 L 600 502" fill="none" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 586 527 L 600 527 L 600 502 L 600 502" fill="none" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="764" y1="502" x2="778" y2="502" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="972" y1="502" x2="986" y2="502" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 224.0 368 L 224.0 394 L 495.0 394" fill="none" stroke="#A9ABA6" stroke-width="1.6"/>
+<path d="M 620.0 368 L 620.0 394" fill="none" stroke="#A9ABA6" stroke-width="1.6"/>
+<line x1="495.0" y1="394" x2="495.0" y2="450" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="634.0" y="390" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#6E7278">reads</text>
+<text x="1194" y="570" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#6E7278">every claim carries a source, or the system declines to answer</text>
+<rect x="24" y="634" width="1192" height="248" rx="10" fill="#F3F1EC"/>
+<text x="44" y="660" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.1" fill="#15635C">4 · AGENT</text>
+<text x="126.39999999999999" y="660" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" fill="#6E7278">per goal — minutes, with approval gates</text>
+<rect x="44" y="698" width="200" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="144.0" y="729.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Goal</text>
+<text x="144.0" y="746.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">renewal in 90 days</text>
+<rect x="282" y="698" width="200" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="382.0" y="729.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Plan steps</text>
+<text x="382.0" y="746.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">decide the sequence</text>
+<rect x="520" y="698" width="200" height="72" rx="7" fill="#E7F0EE" stroke="#BBD5D0" stroke-width="1.2"/>
+<text x="620.0" y="729.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#0F4F49">Retrieve facts</text>
+<text x="620.0" y="746.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">uses the query pipeline</text>
+<rect x="758" y="698" width="200" height="72" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="858.0" y="729.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Act on tools</text>
+<text x="858.0" y="746.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">Jira · Calendar · Slack</text>
+<rect x="996" y="698" width="200" height="72" rx="7" fill="#FBF0DC" stroke="#E5C98F" stroke-width="1.2"/>
+<text x="1096.0" y="729.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#7C4A08">Approval gate</text>
+<text x="1096.0" y="746.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#6E7278">irreversible actions held</text>
+<line x1="250" y1="734.0" x2="274" y2="734.0" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="488" y1="734.0" x2="512" y2="734.0" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="726" y1="734.0" x2="750" y2="734.0" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="964" y1="734.0" x2="988" y2="734.0" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M 620.0 690 L 620.0 626 L 1094 626 L 1094 546" fill="none" stroke="#A9ABA6" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<text x="630.0" y="622" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#6E7278">asks the same question pipeline</text>
+<path d="M 858.0 776 L 858.0 804 L 382.0 804 L 382.0 778" fill="none" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="620.0" y="820" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#6E7278">observe the result, then replan until done</text>
+<rect x="996" y="814" width="200" height="46" rx="7" fill="#FFFFFF" stroke="#DAD7D0" stroke-width="1.2"/>
+<text x="1096.0" y="842.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1A1D21">Execute + log</text>
+<path d="M 1096.0 776 L 1096.0 808" fill="none" stroke="#A9ABA6" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="1096.0" y="878" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9A5B0B">only after a human approves</text>
+<rect x="24" y="902" width="1192" height="76" rx="10" fill="#E7F0EE"/>
+<text x="44" y="928" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F4F49">Runs entirely on one laptop, at zero cost</text>
+<text x="44" y="950" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#6E7278">bge-small embeddings · bge-reranker-base ranking · qwen2.5:7b generation via Ollama — no API keys, no per-query charge.</text>
+<text x="44" y="966" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#6E7278">Chroma and BM25 are files on disk; Postgres arrives in Phase 4 with permissions and the audit log.</text>
+</svg>
