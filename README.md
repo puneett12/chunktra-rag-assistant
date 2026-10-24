@@ -208,7 +208,6 @@ cost: zero.
 ## Project ownership
 
 **Puneet Tulsiani** — product owner and sole developer.
-MS Computer Science, Pace University · New York, NY.
 
 [GitHub](https://github.com/puneett12) ·
 [LinkedIn](https://linkedin.com/in/puneettulsiani)
