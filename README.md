@@ -1,4 +1,4 @@
-# Clause — Enterprise RAG Document Assistant
+# Chunktra — Enterprise RAG Document Assistant
 
 Ask a question about your own documents. Get an answer with the exact clause
 quoted and a pointer to the page it came from — or an honest "the documents
