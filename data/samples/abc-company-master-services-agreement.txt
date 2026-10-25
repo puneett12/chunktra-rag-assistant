@@ -1,0 +1,216 @@
+MASTER SERVICES AGREEMENT
+
+This Master Services Agreement (the "Agreement") is entered into as of 4 March 2024
+(the "Effective Date") by and between Meridian Industries Inc., a Delaware corporation
+with offices at 400 Harbor Street, Wilmington, Delaware ("Customer"), and ABC Company
+LLC, a New York limited liability company with offices at 118 Lexington Avenue,
+New York, New York ("Supplier").
+
+Customer contact for notices: R. Mehta, Director of Procurement.
+Supplier contact for notices: contracts@abc-company.com.
+
+
+1. DEFINITIONS
+
+1.1 "Services" means the professional, managed and support services described in each
+Statement of Work executed by the parties under this Agreement.
+
+1.2 "Statement of Work" or "SOW" means a document describing specific Services,
+deliverables, timelines and fees, executed by authorised representatives of both parties
+and incorporated into this Agreement by reference.
+
+1.3 "Deliverables" means any reports, software, documentation or other work product
+that Supplier is required to deliver to Customer under a Statement of Work.
+
+1.4 "Confidential Information" means non-public information disclosed by one party to
+the other that is marked confidential or that a reasonable person would understand to be
+confidential given the nature of the information and the circumstances of disclosure.
+
+
+2. SERVICES
+
+2.1 Supplier shall perform the Services in accordance with each applicable Statement of
+Work and in a professional and workmanlike manner consistent with industry standards.
+
+2.2 No Statement of Work shall be binding until executed by both parties. In the event
+of a conflict between this Agreement and any Statement of Work, the terms of this
+Agreement shall control unless the Statement of Work expressly states otherwise and is
+signed by an officer of each party.
+
+2.3 Supplier shall not subcontract performance of any material portion of the Services
+without Customer's prior written consent, such consent not to be unreasonably withheld.
+
+
+3. FEES AND PAYMENT
+
+3.1 Customer shall pay the fees set out in each Statement of Work. Unless otherwise
+specified, fees are quoted in United States dollars and exclude applicable taxes.
+
+3.2 Supplier shall invoice Customer monthly in arrears. Undisputed invoices are payable
+within forty-five (45) days of receipt.
+
+3.3 Annual fees shall increase upon each renewal term by the lesser of the increase in
+the Consumer Price Index for All Urban Consumers (CPI-U) over the preceding twelve
+months or three percent (3%).
+
+3.4 Customer may withhold payment of any amount it disputes in good faith, provided it
+notifies Supplier of the dispute in writing within thirty (30) days of the invoice date
+and pays all undisputed amounts when due.
+
+
+4. TRAVEL AND EXPENSES
+
+4.1 Customer shall reimburse Supplier for reasonable, pre-approved travel and
+out-of-pocket expenses incurred in performing the Services, provided such expenses are
+submitted with supporting receipts within sixty (60) days of being incurred.
+
+
+5. CONFIDENTIALITY
+
+5.1 Each party shall protect the other's Confidential Information using at least the
+degree of care it uses to protect its own confidential information, and in no event less
+than a reasonable degree of care.
+
+5.2 The obligations in this Section 5 survive termination of this Agreement for a period
+of five (5) years, except with respect to trade secrets, for which the obligations
+survive for so long as the information remains a trade secret under applicable law.
+
+
+6. INTELLECTUAL PROPERTY
+
+6.1 Customer retains all right, title and interest in Customer materials provided to
+Supplier. Supplier retains all right, title and interest in its pre-existing tools,
+methodologies and know-how.
+
+6.2 Upon full payment, Supplier assigns to Customer all right, title and interest in the
+Deliverables created specifically for Customer under a Statement of Work, excluding any
+Supplier pre-existing materials incorporated therein, for which Supplier grants Customer
+a perpetual, non-exclusive, worldwide licence to use such materials as part of the
+Deliverables.
+
+
+7. WARRANTIES
+
+7.1 Supplier warrants that the Services will be performed in a professional and
+workmanlike manner and that the Deliverables will materially conform to the
+specifications in the applicable Statement of Work for ninety (90) days following
+delivery.
+
+7.2 EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, SUPPLIER DISCLAIMS ALL OTHER
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE.
+
+
+8. LIMITATION OF LIABILITY
+
+8.1 Neither party shall be liable for any indirect, incidental, special, consequential or
+punitive damages, or for lost profits or lost revenue, arising out of or relating to this
+Agreement, even if advised of the possibility of such damages.
+
+8.2 Each party's total aggregate liability arising out of or relating to this Agreement
+shall not exceed the total fees paid or payable by Customer under the applicable
+Statement of Work during the twelve (12) months immediately preceding the event giving
+rise to the claim.
+
+8.3 The limitations in this Section 8 do not apply to a party's indemnification
+obligations under Section 9, to breaches of Section 5 (Confidentiality), or to damages
+arising from a party's gross negligence or wilful misconduct.
+
+
+9. INDEMNIFICATION
+
+9.1 Supplier shall defend, indemnify and hold harmless Customer against any third-party
+claim alleging that the Deliverables infringe a United States patent, copyright or trade
+secret, and shall pay any damages finally awarded or amounts agreed in settlement.
+
+9.2 Customer shall defend, indemnify and hold harmless Supplier against any third-party
+claim arising from Customer materials supplied to Supplier for use in the Services.
+
+
+10. DATA PROTECTION
+
+10.1 Supplier shall process Customer personal data only on documented instructions from
+Customer and shall implement appropriate technical and organisational measures to protect
+such data.
+
+10.2 Supplier shall notify Customer without undue delay, and in any event within
+seventy-two (72) hours, after becoming aware of a personal data breach affecting Customer
+personal data.
+
+
+11. INSURANCE
+
+11.1 Supplier shall maintain, at its own expense, commercial general liability insurance
+of not less than two million dollars ($2,000,000) per occurrence and professional
+liability insurance of not less than five million dollars ($5,000,000) in the aggregate.
+
+
+12. TERM AND TERMINATION
+
+12.1 Initial Term. This Agreement commences on the Effective Date and continues for an
+initial term of three (3) years, expiring on 14 February 2027, unless terminated earlier
+in accordance with this Section 12.
+
+12.2 Statements of Work. Each Statement of Work continues for the period stated therein.
+Expiration or termination of this Agreement terminates all outstanding Statements of
+Work unless the parties agree otherwise in writing.
+
+12.3 Renewal and Notice. This Agreement shall automatically renew for successive
+one-year terms unless either party gives ninety (90) days written notice prior to the end
+of the then-current term. Notice given under this Section 12.3 must be delivered in
+accordance with Section 14 and is effective upon receipt.
+
+12.4 Termination for Convenience. After the Initial Term, either party may terminate this
+Agreement for convenience upon one hundred eighty (180) days written notice, provided
+that Customer shall remain liable for fees for Services performed through the effective
+date of termination.
+
+12.5 Termination for Breach. In the event of a material breach, the non-breaching party
+may terminate this Agreement upon thirty (30) days written notice, provided the breaching
+party has failed to cure such breach within fifteen (15) days of receiving written notice
+describing the breach in reasonable detail.
+
+12.6 Effect of Termination. Upon termination, Supplier shall promptly return or destroy
+Customer Confidential Information, deliver all completed Deliverables for which Customer
+has paid, and provide reasonable transition assistance for up to sixty (60) days at
+Supplier's then-current time and materials rates.
+
+
+13. GOVERNING LAW AND DISPUTES
+
+13.1 This Agreement is governed by the laws of the State of Delaware, without regard to
+its conflict of laws principles.
+
+13.2 The parties shall attempt in good faith to resolve any dispute through negotiation
+between senior executives for thirty (30) days before commencing litigation. Any suit
+shall be brought exclusively in the state or federal courts located in Wilmington,
+Delaware, and each party consents to the jurisdiction of such courts.
+
+
+14. NOTICES
+
+14.1 All notices under this Agreement must be in writing and delivered by hand, by
+certified mail return receipt requested, by nationally recognised overnight courier, or
+by email with written confirmation of receipt, to the contacts identified above.
+
+14.2 Notices are deemed given upon receipt if delivered by hand or courier, three (3)
+business days after mailing if sent by certified mail, or upon confirmation of receipt if
+sent by email.
+
+
+15. GENERAL
+
+15.1 Assignment. Neither party may assign this Agreement without the other's prior
+written consent, except to a successor in connection with a merger or sale of
+substantially all assets.
+
+15.2 Force Majeure. Neither party is liable for delay or failure to perform caused by
+events beyond its reasonable control, provided it gives prompt notice and uses
+commercially reasonable efforts to resume performance.
+
+15.3 Entire Agreement. This Agreement, together with all Statements of Work and
+amendments, constitutes the entire agreement between the parties and supersedes all prior
+understandings relating to its subject matter.
+
+15.4 Amendment. This Agreement may be amended only by a written instrument signed by
+authorised representatives of both parties.

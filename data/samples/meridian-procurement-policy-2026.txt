@@ -1,0 +1,98 @@
+MERIDIAN INDUSTRIES INC.
+PROCUREMENT POLICY 2026
+
+Owner: Office of the Chief Financial Officer
+Effective: 1 January 2026
+Applies to: all employees who commit company funds or sign supplier agreements
+
+
+1. PURPOSE AND SCOPE
+
+1.1 This policy governs how Meridian Industries selects, contracts with and manages
+third-party suppliers. It applies to all purchases of goods and services regardless of
+value, and to all renewals and amendments of existing supplier agreements.
+
+1.2 Deviations from this policy require written approval from the Chief Financial Officer
+in advance of commitment. Retrospective approval is not permitted.
+
+
+2. AUTHORITY TO COMMIT
+
+2.1 Spend authority is as follows:
+
+    Up to $25,000 .................. Department Manager
+    $25,001 to $250,000 ............ Director of Procurement
+    $250,001 to $1,000,000 ......... Chief Financial Officer
+    Above $1,000,000 ............... Board Audit Committee
+
+2.2 A multi-year commitment is assessed at its total contract value, not its annual
+value, for the purposes of Section 2.1.
+
+2.3 Splitting a purchase into smaller transactions to remain below an approval threshold
+is a disciplinary matter.
+
+
+3. COMPETITIVE SOURCING
+
+3.1 Purchases above $100,000 require a minimum of three written quotations, or a
+documented sole-source justification approved by the Director of Procurement.
+
+3.2 Sole-source justifications are valid for twenty-four (24) months and must be renewed
+before any subsequent award to the same supplier.
+
+
+4. CONTRACT TERMS
+
+4.1 Term length. New supplier agreements shall not exceed an initial term of three (3)
+years without CFO approval.
+
+4.2 Price escalation. Annual price escalation clauses shall not exceed the lesser of CPI
+or three percent (3%) per year. Any escalation clause exceeding this ceiling requires
+written CFO approval and must be recorded as a policy exception in the contract register.
+
+4.3 Notice periods. Agreements containing automatic renewal provisions must provide the
+Company with a termination notice window of no less than sixty (60) days and no more than
+one hundred eighty (180) days before the renewal date.
+
+4.4 Liability. Supplier liability caps below twelve (12) months of fees require Legal
+review. Unlimited liability carve-outs for confidentiality, data protection and
+indemnification are mandatory.
+
+4.5 Governing law. Agreements shall be governed by the law of a United States
+jurisdiction unless Legal approves otherwise in writing.
+
+
+5. RENEWAL MANAGEMENT
+
+5.1 The contract owner is responsible for reviewing each agreement no later than one
+hundred twenty (120) days before its renewal date.
+
+5.2 The renewal review must assess: supplier performance against service levels, current
+market pricing, continued business need, and whether the agreement's terms remain
+compliant with this policy.
+
+5.3 Where the Company intends not to renew, written notice must be issued no later than
+five (5) business days before the contractual notice deadline, to allow for delivery and
+receipt.
+
+5.4 An agreement that renews automatically because notice was missed is a reportable
+control failure and must be logged with the Office of the CFO within ten (10) business
+days.
+
+
+6. SUPPLIER RISK
+
+6.1 Suppliers processing Company personal data must complete the Data Protection
+Assessment before contract signature and annually thereafter.
+
+6.2 Suppliers with annual spend above $500,000 are subject to an annual financial
+viability review.
+
+
+7. CONTRACT REGISTER
+
+7.1 All executed agreements, amendments and policy exceptions must be filed in the
+contract register within five (5) business days of signature.
+
+7.2 The contract register is the system of record for renewal dates, notice deadlines and
+approved exceptions.

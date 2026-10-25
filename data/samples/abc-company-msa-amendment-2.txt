@@ -1,0 +1,42 @@
+AMENDMENT NO. 2 TO MASTER SERVICES AGREEMENT
+
+This Amendment No. 2 (the "Amendment") is made as of 11 January 2026 between Meridian
+Industries Inc. ("Customer") and ABC Company LLC ("Supplier"), and amends the Master
+Services Agreement between the parties dated 4 March 2024 (the "Agreement").
+
+Capitalised terms not defined in this Amendment have the meanings given in the Agreement.
+
+
+1. AMENDMENTS
+
+1.1 Scope Expansion. Schedule A to Statement of Work 7 is amended to include managed
+monitoring of Customer's North American data centres, effective 1 February 2026.
+
+1.2 Fee Escalation. Section 3.3 of the Agreement is deleted in its entirety and replaced
+with the following:
+
+    "3.3 Annual fees shall increase upon each renewal term by the lesser of the increase
+    in the Consumer Price Index for All Urban Consumers (CPI-U) over the preceding twelve
+    months or four percent (4%)."
+
+1.3 Service Levels. A new Section 2.4 is added to the Agreement:
+
+    "2.4 Supplier shall maintain monthly availability of not less than 99.5% for the
+    monitored services. For each full percentage point below that threshold, Customer
+    shall receive a service credit equal to five percent (5%) of the monthly fee for the
+    affected services, capped at twenty-five percent (25%) of that monthly fee. Service
+    credits are Customer's sole and exclusive remedy for availability failures."
+
+
+2. NO OTHER CHANGES
+
+Except as expressly amended above, all terms and conditions of the Agreement remain in
+full force and effect. For the avoidance of doubt, this Amendment does not alter the
+Initial Term, the renewal mechanics or the notice period set out in Section 12 of the
+Agreement.
+
+
+3. COUNTERPARTS
+
+This Amendment may be executed in counterparts, each of which is deemed an original and
+all of which together constitute one instrument.

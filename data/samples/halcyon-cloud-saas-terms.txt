@@ -1,0 +1,98 @@
+HALCYON CLOUD
+SUBSCRIPTION TERMS OF SERVICE
+
+Between Halcyon Cloud Inc. ("Halcyon") and the subscribing customer identified in the
+applicable Order Form ("Customer"). Order date: 22 August 2025.
+
+
+1. SUBSCRIPTION
+
+1.1 Halcyon grants Customer a non-exclusive, non-transferable right to access and use the
+Halcyon platform (the "Service") during the Subscription Term, solely for Customer's
+internal business purposes and subject to the usage limits in the Order Form.
+
+1.2 Customer shall not resell, sublicense, reverse engineer, or use the Service to build
+a competing product.
+
+
+2. SUBSCRIPTION TERM AND RENEWAL
+
+2.1 The Initial Subscription Term is twelve (12) months from the Order date.
+
+2.2 The subscription renews automatically for successive twelve-month periods unless
+either party provides written notice of non-renewal at least thirty (30) days before the
+end of the then-current term.
+
+2.3 Halcyon may increase fees for any renewal term by providing notice at least
+forty-five (45) days before the renewal date. Increases shall not exceed seven percent
+(7%) per renewal term.
+
+
+3. FEES
+
+3.1 Fees are invoiced annually in advance and are payable within thirty (30) days of the
+invoice date.
+
+3.2 Fees are non-refundable except as expressly provided in Section 5.3.
+
+3.3 Overages beyond the usage limits in the Order Form are billed monthly in arrears at
+the rates stated in the Order Form.
+
+
+4. CUSTOMER DATA
+
+4.1 Customer retains all right, title and interest in Customer Data. Halcyon may use
+Customer Data only to provide and improve the Service and as otherwise permitted by the
+Data Processing Addendum.
+
+4.2 Halcyon maintains daily backups with a recovery point objective of twenty-four (24)
+hours and a recovery time objective of four (4) hours.
+
+4.3 On termination, Halcyon will make Customer Data available for export for thirty (30)
+days, after which it will be deleted within a further sixty (60) days.
+
+
+5. SERVICE LEVELS
+
+5.1 Halcyon will use commercially reasonable efforts to make the Service available
+99.9% of the time each calendar month, excluding scheduled maintenance.
+
+5.2 Scheduled maintenance will be announced at least seventy-two (72) hours in advance
+and will not exceed four (4) hours per month.
+
+5.3 If monthly availability falls below 99.0% in any two consecutive months, Customer may
+terminate the subscription immediately on written notice and receive a pro-rata refund of
+prepaid fees for the remainder of the term.
+
+
+6. SUPPORT
+
+6.1 Standard support is included and provides a four (4) business hour response target
+for critical issues during business hours (09:00-18:00 Eastern, Monday to Friday,
+excluding public holidays).
+
+6.2 Premium support, if purchased, provides a one (1) hour response target, twenty-four
+hours a day, seven days a week.
+
+
+7. SUSPENSION
+
+7.1 Halcyon may suspend access if Customer's account is more than thirty (30) days past
+due, or if Customer's use poses a security risk to the Service or other customers.
+
+7.2 Halcyon will provide at least ten (10) days notice before suspending for non-payment,
+except where immediate suspension is necessary to protect the Service.
+
+
+8. LIMITATION OF LIABILITY
+
+8.1 Halcyon's total liability under these terms shall not exceed the fees paid by
+Customer in the twelve (12) months preceding the claim.
+
+8.2 Neither party is liable for indirect, incidental or consequential damages.
+
+
+9. GOVERNING LAW
+
+9.1 These terms are governed by the laws of the State of New York, and the parties submit
+to the exclusive jurisdiction of the courts located in New York County, New York.
