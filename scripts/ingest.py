@@ -53,7 +53,7 @@ def main() -> int:
     BATCH = 256
     for i in range(0, len(all_chunks), BATCH):
         batch = all_chunks[i:i + BATCH]
-        store.add_chunks(batch, embed_passages([c.text for c in batch]))
+        store.add_chunks(batch, embed_passages([c.indexed_text() for c in batch]))
         print(f"  embedded {min(i + BATCH, len(all_chunks))}/{len(all_chunks)}")
 
     print("Building keyword (BM25) index...")

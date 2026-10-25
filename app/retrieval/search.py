@@ -15,6 +15,7 @@ from __future__ import annotations
 from typing import Any
 
 from app.config import settings
+from app.ingestion.chunk import contextualize
 from app.retrieval import store
 from app.retrieval.embed import embed_query, rerank
 
@@ -57,7 +58,13 @@ def search(
         return []
 
     if use_rerank:
-        scores = rerank(query, [r["text"] for r in fused])
+        # the reranker needs the document's identity too, or it scores every
+        # contract's termination clause the same and can demote the right one
+        passages = [
+            contextualize(r["meta"].get("title", ""), r["meta"].get("section", ""), r["text"])
+            for r in fused
+        ]
+        scores = rerank(query, passages)
         for row, s in zip(fused, scores):
             row["rerank_score"] = s
         fused.sort(key=lambda r: r["rerank_score"], reverse=True)

@@ -82,7 +82,7 @@ def vector_search(vector: list[float], k: int, allowed_tags: list[str] | None = 
 def build_bm25(chunks: list[Chunk]) -> None:
     from rank_bm25 import BM25Okapi
 
-    corpus = [c.text.lower().split() for c in chunks]
+    corpus = [c.indexed_text().lower().split() for c in chunks]
     index = BM25Okapi(corpus)
     payload = {
         "index": index,

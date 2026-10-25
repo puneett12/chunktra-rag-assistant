@@ -24,6 +24,19 @@ HEADING = re.compile(
 )
 
 
+def contextualize(title: str, section: str, text: str) -> str:
+    """Prefix a chunk with where it came from, so it carries its identity.
+
+    Without this, clause 12.3 of one contract looks exactly like clause 12.3 of
+    every other contract — the document's name only appears on its first page.
+    The header goes into the indexes and the reranker, never into the text
+    shown to the user.
+    """
+    if not settings.contextual_headers:
+        return text
+    return f"Document: {title}\nSection: {section}\n\n{text}"
+
+
 @dataclass
 class Chunk:
     chunk_id: str
@@ -36,6 +49,10 @@ class Chunk:
     # Phase 4 will populate this with real roles; every chunk carries it from day one
     # so that adding permissions later is a filter change, not a re-index.
     access_tags: list[str]
+
+    def indexed_text(self) -> str:
+        """What the embedding model and BM25 actually see."""
+        return contextualize(self.title, self.section, self.text)
 
 
 def _split_units(text: str) -> list[str]:

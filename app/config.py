@@ -21,6 +21,9 @@ class Settings(BaseSettings):
     # Chunking
     chunk_size: int = 900
     chunk_overlap: int = 150
+    # Prefix each chunk with its document title and section before indexing,
+    # so a clause still knows which contract it belongs to. Requires re-ingest.
+    contextual_headers: bool = True
 
     # Retrieval
     candidates: int = 30

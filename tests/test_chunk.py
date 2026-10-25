@@ -63,3 +63,21 @@ def test_section_label_is_a_heading_not_a_sentence():
 
 def test_empty_document_is_safe():
     assert chunk_document(_doc("   \n\n  ")) == []
+
+
+def test_indexed_text_carries_document_identity():
+    """Every chunk must know which document it came from once indexed."""
+    from app.ingestion.chunk import contextualize
+    chunks = chunk_document(_doc())
+    renewal = [c for c in chunks if "ninety (90) days written notice" in c.text][0]
+    indexed = renewal.indexed_text()
+    assert "Sample MSA" in indexed          # the document title travels with it
+    assert renewal.text in indexed          # the original clause is intact
+    assert "Sample MSA" not in renewal.text  # but the displayed text stays clean
+
+
+def test_contextual_headers_can_be_disabled(monkeypatch):
+    from app.config import settings
+    from app.ingestion.chunk import contextualize
+    monkeypatch.setattr(settings, "contextual_headers", False)
+    assert contextualize("Title", "12.3", "body") == "body"
