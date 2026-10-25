@@ -66,10 +66,14 @@ def main() -> int:
     ap.add_argument("--k", type=int, default=5)
     ap.add_argument("--no-rerank", action="store_true")
     ap.add_argument("--compare", action="store_true",
-                    help="run vector-only, hybrid, and hybrid+rerank side by side")
+                    help="run hybrid with and without rerank side by side")
+    ap.add_argument("--questions", default=str(QUESTIONS),
+                    help="question set to evaluate (default: eval/questions.yaml)")
     args = ap.parse_args()
 
-    spec = yaml.safe_load(QUESTIONS.read_text())
+    qpath = Path(args.questions)
+    print(f"Question set: {qpath.name}")
+    spec = yaml.safe_load(qpath.read_text())
     items = [q for q in spec.get("questions", []) if not q.get("unanswerable")]
     refusals = [q for q in spec.get("questions", []) if q.get("unanswerable")]
 

@@ -1,0 +1,124 @@
+# Evaluation set. This file is the most important one in the repository.
+#
+# Without it, every retrieval change is a guess. With it, each change produces a
+# number you can defend — and put in your README.
+#
+# Fields:
+#   question      what a user would actually ask, in their own words
+#   expect_doc    doc_id (the filename without extension) holding the answer
+#   expect_text   a distinctive phrase that MUST appear in the retrieved chunk
+#   unanswerable  true if the corpus genuinely does not cover it. Keep ~10% of
+#                 these — a system that never refuses is not honest.
+
+questions:
+
+  # --- ABC Company Master Services Agreement -------------------------------
+  - question: "What is the notice period for terminating the agreement?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "ninety (90) days written notice"
+
+  - question: "Does the contract renew automatically?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "automatically renew for successive"
+
+  - question: "Which state's law governs this agreement?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "laws of the State of Delaware"
+
+  - question: "Is there a cap on how much either party can be liable for?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "twelve (12) months immediately preceding"
+
+  - question: "How long do we have to pay an invoice?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "forty-five (45) days"
+
+  - question: "How much insurance is the supplier required to carry?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "two million dollars"
+
+  - question: "How quickly must the supplier report a data breach?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "seventy-two (72) hours"
+
+  - question: "What happens if one side seriously breaks the contract?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "thirty (30) days written notice"
+
+  - question: "How long do confidentiality obligations last after the contract ends?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "five (5) years"
+
+  - question: "Can the supplier bring in subcontractors?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "shall not subcontract"
+
+  - question: "When does the initial term expire?"
+    expect_doc: "abc-company-master-services-agreement"
+    expect_text: "14 February 2027"
+
+  # --- Amendment No. 2 -----------------------------------------------------
+  - question: "What is the annual price increase cap after the amendment?"
+    expect_doc: "abc-company-msa-amendment-2"
+    expect_text: "four percent (4%)"
+
+  - question: "What uptime did the supplier commit to for monitoring?"
+    expect_doc: "abc-company-msa-amendment-2"
+    expect_text: "99.5%"
+
+  - question: "What do we get if the monitoring service misses its availability target?"
+    expect_doc: "abc-company-msa-amendment-2"
+    expect_text: "service credit"
+
+  # --- Halcyon Cloud SaaS terms --------------------------------------------
+  - question: "How much notice to cancel the Halcyon subscription?"
+    expect_doc: "halcyon-cloud-saas-terms"
+    expect_text: "thirty (30) days before the"
+
+  - question: "What availability does Halcyon promise?"
+    expect_doc: "halcyon-cloud-saas-terms"
+    expect_text: "99.9%"
+
+  - question: "How long can we export our data after leaving Halcyon?"
+    expect_doc: "halcyon-cloud-saas-terms"
+    expect_text: "available for export"
+
+  - question: "Can Halcyon cut off our access if we pay late?"
+    expect_doc: "halcyon-cloud-saas-terms"
+    expect_text: "thirty (30) days past"
+
+  - question: "How much can Halcyon raise the price at renewal?"
+    expect_doc: "halcyon-cloud-saas-terms"
+    expect_text: "seven percent"
+
+  # --- Meridian procurement policy -----------------------------------------
+  - question: "What is the maximum annual price escalation our policy allows?"
+    expect_doc: "meridian-procurement-policy-2026"
+    expect_text: "three percent (3%)"
+
+  - question: "Who has to approve a four hundred thousand dollar purchase?"
+    expect_doc: "meridian-procurement-policy-2026"
+    expect_text: "Chief Financial Officer"
+
+  - question: "How far ahead of renewal must a contract be reviewed?"
+    expect_doc: "meridian-procurement-policy-2026"
+    expect_text: "one hundred twenty (120) days"
+
+  - question: "How many quotes do we need for a large purchase?"
+    expect_doc: "meridian-procurement-policy-2026"
+    expect_text: "three written quotations"
+
+  - question: "What happens if we miss a notice deadline and a contract auto-renews?"
+    expect_doc: "meridian-procurement-policy-2026"
+    expect_text: "reportable control failure"
+
+  # --- Deliberately unanswerable -------------------------------------------
+  # The system should decline these, not invent an answer.
+  - question: "What is the CEO's home address?"
+    unanswerable: true
+
+  - question: "How many days of parental leave do employees get?"
+    unanswerable: true
+
+  - question: "What was the supplier's revenue last quarter?"
+    unanswerable: true
