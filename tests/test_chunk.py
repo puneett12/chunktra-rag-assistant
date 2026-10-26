@@ -81,3 +81,25 @@ def test_contextual_headers_can_be_disabled(monkeypatch):
     from app.ingestion.chunk import contextualize
     monkeypatch.setattr(settings, "contextual_headers", False)
     assert contextualize("Title", "12.3", "body") == "body"
+
+
+def test_overlap_never_starts_mid_word():
+    """Overlap carried into a chunk must begin on a whole word.
+
+    Slicing the overlap at a fixed character offset produced chunks starting
+    "s Agreement shall be governed..." — ugly in a citation, and it caused the
+    evaluator to miss answers the system had actually retrieved. Sweeps many
+    overlap sizes so a cut can't land between words by luck.
+    """
+    import re
+    clauses = [
+        f"{n}. The supplier shall deliver {'consignment' if n % 2 else 'goods'} within "
+        f"{n * 7} business days after receiving written notice from the purchaser."
+        for n in range(1, 25)
+    ]
+    doc = ParsedDoc("t", "T", _clean("\n\n".join(clauses)), "t.txt")
+    words = set(re.findall(r"\S+", doc.text))
+    for overlap in range(31, 120, 7):
+        for c in chunk_document(doc, size=260, overlap=overlap)[1:]:
+            first = c.text.split()[0]
+            assert first in words, f"overlap={overlap}: chunk starts mid-word: {c.text[:40]!r}"

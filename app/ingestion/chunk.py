@@ -90,6 +90,29 @@ def _looks_like_heading(text: str) -> bool:
     return all(w[0].isupper() for w in words if len(w) > 3 and w[0].isalpha())
 
 
+def _tail(text: str, overlap: int) -> str:
+    """The last ~`overlap` characters of `text`, starting on a whole word.
+
+    A plain text[-overlap:] cuts wherever the count lands, so the next chunk
+    began "s Agreement shall be governed..." — ugly in a citation, and it made
+    the evaluator miss answers the system had actually retrieved. Extend the cut
+    back to the start of the word it fell inside (at most 60 characters); if no
+    word boundary is that close, move forward to the next one instead.
+    """
+    if overlap <= 0 or not text:
+        return ""
+    cut = max(0, len(text) - overlap)
+    back = cut
+    while back > 0 and cut - back < 60 and not text[back - 1].isspace():
+        back -= 1
+    if back == 0 or text[back - 1].isspace():
+        cut = back
+    else:
+        while cut < len(text) and not text[cut].isspace():
+            cut += 1
+    return text[cut:].strip()
+
+
 def _current_section(unit: str, fallback: str) -> str:
     """Return a short section label like "12.3 Renewal", or keep the previous one."""
     first = unit.split("\n", 1)[0].strip()
@@ -163,7 +186,7 @@ def chunk_document(
         if buf_len + len(unit) > size and buf:
             flush(offset, buf_section)
             # carry the tail of the previous chunk forward as overlap
-            tail = "\n\n".join(buf)[-overlap:] if overlap else ""
+            tail = _tail("\n\n".join(buf), overlap)
             buf = [tail, unit] if tail else [unit]
             buf_len = len(tail) + len(unit)
             offset = search_from
