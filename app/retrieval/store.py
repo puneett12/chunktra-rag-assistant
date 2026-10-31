@@ -78,6 +78,43 @@ def vector_search(vector: list[float], k: int, allowed_tags: list[str] | None = 
     return out
 
 
+def vector_search_in_docs(vector: list[float], k: int, doc_ids: list[str],
+                          allowed_tags: list[str] | None = None) -> list[dict[str, Any]]:
+    """Exact similarity search restricted to the given documents.
+
+    Brute force on purpose. A contract has at most a few hundred chunks, so
+    comparing against every one is instant and exact — and it avoids the
+    approximate index, which can fail outright when a filter leaves it fewer
+    matches than requested.
+    """
+    import numpy as np
+
+    where = ({"doc_id": doc_ids[0]} if len(doc_ids) == 1
+             else {"doc_id": {"$in": list(doc_ids)}})
+    got = collection().get(where=where, include=["embeddings", "documents", "metadatas"])
+    if not got["ids"]:
+        return []
+    emb = np.asarray(got["embeddings"], dtype=np.float32)
+    sims = emb @ np.asarray(vector, dtype=np.float32)   # vectors are normalised: dot = cosine
+    out = []
+    for i in np.argsort(-sims):
+        meta = got["metadatas"][i]
+        # same permission rule as vector_search: scoping must never bypass it
+        if allowed_tags is not None:
+            tags = set(str(meta.get("access_tags", "")).split(","))
+            if not tags & set(allowed_tags):
+                continue
+        out.append({
+            "chunk_id": got["ids"][i],
+            "text": got["documents"][i],
+            "meta": meta,
+            "vector_score": float(sims[i]),
+        })
+        if len(out) == k:
+            break
+    return out
+
+
 # ----------------------------------------------------------------- bm25 index
 def build_bm25(chunks: list[Chunk]) -> None:
     from rank_bm25 import BM25Okapi
@@ -100,7 +137,8 @@ def build_bm25(chunks: list[Chunk]) -> None:
 _bm25_cache: dict | None = None
 
 
-def bm25_search(query: str, k: int) -> list[dict[str, Any]]:
+def bm25_search(query: str, k: int, doc_ids: list[str] | None = None
+                ) -> list[dict[str, Any]]:
     global _bm25_cache
     path = settings.index_path / BM25_FILE
     if not path.exists():
@@ -110,7 +148,11 @@ def bm25_search(query: str, k: int) -> list[dict[str, Any]]:
             _bm25_cache = pickle.load(fh)
 
     scores = _bm25_cache["index"].get_scores(query.lower().split())
-    ranked = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:k]
+    pool = range(len(scores))
+    if doc_ids:
+        wanted = set(doc_ids)
+        pool = [i for i in pool if _bm25_cache["meta"][i]["meta"]["doc_id"] in wanted]
+    ranked = sorted(pool, key=lambda i: scores[i], reverse=True)[:k]
     out = []
     for i in ranked:
         if scores[i] <= 0:

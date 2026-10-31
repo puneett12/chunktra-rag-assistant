@@ -78,7 +78,14 @@ class RunResult:
 
 
 def run(items: list[dict], k: int, use_rerank: bool, candidates: int | None = None,
-        verbose: bool = True) -> RunResult:
+        verbose: bool = True, oracle_scope: bool = False) -> RunResult:
+    """Run every question through search and score it.
+
+    oracle_scope hands each question its known correct document and searches only
+    inside it. That's cheating on purpose: it measures the CEILING of document
+    scoping — how good retrieval would be if we always knew which contract a
+    question was about — before anyone builds the part that has to guess.
+    """
     # The first search loads both models, which takes seconds. Pay that cost
     # before the clock starts or it swamps every latency figure.
     search("warm up", top_k=1, use_rerank=use_rerank, candidates=candidates)
@@ -88,9 +95,10 @@ def run(items: list[dict], k: int, use_rerank: bool, candidates: int | None = No
     returned: list[list] = []
     latencies: list[float] = []
     for q in items:
+        scope = [q["expect_doc"]] if oracle_scope and q.get("expect_doc") else None
         t0 = time.perf_counter()
         results = search(q["question"], top_k=k, use_rerank=use_rerank,
-                         candidates=candidates)
+                         candidates=candidates, doc_ids=scope)
         latencies.append((time.perf_counter() - t0) * 1000)
         returned.append(results)
         pos = hit_position(results, q.get("expect_doc"), q.get("expect_text"))
@@ -164,6 +172,8 @@ def main() -> int:
     ap.add_argument("--category", help='evaluate one category only, e.g. "Governing Law"')
     ap.add_argument("--show-misses", type=int, default=0, metavar="N",
                     help="print the first N misses: where the answer lives, what came back")
+    ap.add_argument("--oracle-scope", action="store_true",
+                    help="search only inside each question's known document (a ceiling, not a feature)")
     args = ap.parse_args()
 
     qpath = Path(args.questions)
@@ -184,7 +194,7 @@ def main() -> int:
         print(f"Comparing configurations over {len(items)} questions (k={args.k})\n")
         rows = []
         for label, rerank in [("hybrid (no rerank)", False), ("hybrid + rerank", True)]:
-            r = run(items, args.k, rerank, verbose=False)
+            r = run(items, args.k, rerank, verbose=False, oracle_scope=args.oracle_scope)
             rows.append((label, r.recall, r.mrr, r.mean_ms, r.latency(95)))
         print(f"  {'configuration':<22} {'Recall@' + str(args.k):>10} {'MRR':>8} "
               f"{'mean ms':>9} {'p95 ms':>8}")
@@ -197,8 +207,10 @@ def main() -> int:
 
     print(f"Evaluating {len(items)} questions "
           f"(k={args.k}, rerank={'off' if args.no_rerank else 'on'}, "
-          f"candidates={settings.candidates})\n")
-    res = run(items, args.k, not args.no_rerank, verbose=not args.quiet)
+          f"candidates={settings.candidates}"
+          f"{', ORACLE-SCOPED to the known document' if args.oracle_scope else ''})\n")
+    res = run(items, args.k, not args.no_rerank, verbose=not args.quiet,
+              oracle_scope=args.oracle_scope)
     recall, mrr, positions, doc_seen, returned = (
         res.recall, res.mrr, res.positions, res.doc_seen, res.returned)
 

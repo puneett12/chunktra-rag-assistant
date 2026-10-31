@@ -46,12 +46,23 @@ def search(
     candidates: int | None = None,
     use_rerank: bool = True,
     allowed_tags: list[str] | None = None,
+    doc_ids: list[str] | None = None,
 ) -> list[dict[str, Any]]:
+    """Hybrid search. With `doc_ids`, only those documents compete.
+
+    Restricting to known documents removes the lookalike problem: a question
+    about one contract's governing law no longer competes with the governing
+    law clauses of every other contract for the candidate slots.
+    """
     top_k = top_k or settings.top_k
     candidates = candidates or settings.candidates
 
-    vector_hits = store.vector_search(embed_query(query), candidates, allowed_tags)
-    keyword_hits = store.bm25_search(query, candidates)
+    if doc_ids:
+        vector_hits = store.vector_search_in_docs(embed_query(query), candidates, doc_ids,
+                                                  allowed_tags)
+    else:
+        vector_hits = store.vector_search(embed_query(query), candidates, allowed_tags)
+    keyword_hits = store.bm25_search(query, candidates, doc_ids)
 
     fused = _fuse(vector_hits, keyword_hits)[:candidates]
     if not fused:
